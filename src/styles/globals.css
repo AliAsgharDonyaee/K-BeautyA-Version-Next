@@ -1,0 +1,272 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+}
+
+@layer components {
+	/* flexing */
+	.fcc {
+		@apply flex;
+		@apply justify-center;
+		@apply items-center;
+	}
+	.fbc {
+		@apply flex;
+		@apply justify-between;
+		@apply items-center;
+	}
+	.fac {
+		@apply flex;
+		@apply justify-around;
+		@apply items-center;
+	}
+	.fas {
+		@apply flex;
+		@apply justify-around;
+		@apply items-start;
+	}
+	.fsc {
+		@apply flex;
+		@apply justify-start;
+		@apply items-center;
+	}
+	.fss{
+		@apply flex;
+		@apply justify-start;
+		@apply items-start;
+	}
+	.fec {
+		@apply flex;
+		@apply justify-end;
+		@apply items-center;
+	}
+	.fevc {
+		@apply flex;
+		@apply justify-evenly;
+		@apply items-center;
+	}
+	.fc {
+		@apply flex;
+		@apply items-center;
+	}
+	.fs {
+		@apply flex;
+		@apply items-start;
+	}
+	.fcs {
+		@apply flex;
+		@apply justify-center;
+		@apply items-start;
+	}
+	.fce {
+		@apply flex;
+		@apply justify-center;
+		@apply items-end;
+	}
+	.gc {
+		@apply grid;
+		@apply place-content-center;
+	}
+	.gic {
+		@apply grid;
+		@apply place-items-center;
+	}
+	/* typeface website */
+	.Display-1 {
+		@apply md:text-[64px];
+		@apply md:font-bold;
+		@apply md:leading-[140%];
+		@apply md:tracking-normal;
+	}
+	.Display-2 {
+		@apply md:text-[56px];
+		@apply md:font-bold;
+		@apply md:leading-[120%];
+		@apply md:tracking-normal;
+	}
+	.Body-XL {
+		@apply md:text-[20px];
+		@apply md:font-normal;
+		@apply md:leading-[180%];
+		@apply md:tracking-normal;
+	}
+	.Body-LG {
+		/* mobile */
+		@apply text-[14px];
+		@apply font-normal;
+		@apply leading-[180%];
+		@apply tracking-normal;
+		/* website */
+		@apply md:text-[18px];
+		@apply md:font-normal;
+		@apply md:leading-[180%];
+		@apply md:tracking-normal;
+	}
+	.Body-MD {
+		/* mobile */
+		@apply text-[14px];
+		@apply font-normal;
+		@apply leading-[140%];
+		@apply tracking-normal;
+		/* website */
+		@apply md:text-[16px];
+		@apply md:font-normal;
+		@apply md:leading-[140%];
+		@apply md:tracking-normal;
+	}
+	.Body-SM {
+		/* mobile */
+		@apply text-[12px];
+		@apply font-normal;
+		@apply leading-[140%];
+		@apply tracking-normal;
+		/* website */
+		@apply md:text-[16px];
+		@apply md:font-normal;
+		@apply md:leading-[180%];
+		@apply md:tracking-normal;
+	}
+	.Body-XS {
+		@apply md:text-[12px];
+		@apply md:font-normal;
+		@apply md:leading-[180%];
+		@apply md:tracking-normal;
+	}
+	.Caption {
+		@apply text-[12px];
+		@apply font-semibold;
+		@apply leading-none;
+		@apply tracking-[0.8px];
+	}
+	.Caption-LG {
+		@apply md:text-[14px];
+		@apply md:font-semibold;
+		@apply md:leading-[140%];
+		@apply md:tracking-normal;
+	}
+	.Caption-MD {
+		@apply md:text-[12px];
+		@apply md:font-normal;
+		@apply md:leading-[180%];
+		@apply md:tracking-normal;
+	}
+	.Caption-SM {
+		@apply md:text-[10px];
+		@apply md:font-semibold;
+		@apply md:leading-[180%];
+		@apply md:tracking-normal;
+	}
+	.Button {
+		@apply text-[14px];
+		@apply font-normal;
+		@apply leading-[140%];
+		@apply tracking-normal;
+	}
+	.Button-LG {
+		@apply md:text-[16px];
+		@apply md:font-normal;
+		@apply md:leading-[180%];
+		@apply md:tracking-normal;
+	}
+	.Button-SM {
+		@apply md:text-[14px];
+		@apply md:font-normal;
+		@apply md:leading-[140%];
+		@apply md:tracking-normal;
+	}
+	.Overline {
+		@apply text-[14px];
+		@apply font-semibold;
+		@apply leading-[140%];
+		@apply tracking-normal;
+	}
+	.Overline-LG {
+		@apply md:text-[16px];
+		@apply md:font-normal;
+		@apply md:leading-[180%];
+		@apply md:tracking-normal;
+	}
+	.Overline-SM {
+		@apply md:text-[12px];
+		@apply md:font-semibold;
+		@apply md:leading-none;
+		@apply md:tracking-[0.8px];
+	}
+	.Icon-Size {
+		/* mobile */
+		@apply w-6;
+		@apply h-6;
+		/* website */
+		@apply xl:w-8;
+		@apply xl:h-8;
+	}
+}
+/*  */
+@layer base {
+	h1 {
+		/* mobile */
+		@apply text-[24px];
+		@apply font-bold;
+		@apply leading-[140%];
+		@apply tracking-normal;
+		/* website */
+		@apply 2xl:text-[56px];
+		@apply 2xl:font-bold;
+		@apply 2xl:leading-[140%];
+		@apply 2xl:tracking-normal;
+	}
+	h2 {
+		/* mobile */
+		@apply text-[20px];
+		@apply font-bold;
+		@apply leading-[140%];
+		@apply tracking-normal;
+		/* website */
+		@apply md:text-[40px];
+		@apply md:font-bold;
+		@apply md:leading-[140%];
+		@apply md:tracking-normal;
+	}
+	h3 {
+		/* mobile */
+		@apply text-[16px];
+		@apply font-bold;
+		@apply leading-[140%];
+		@apply tracking-normal;
+		/* website */
+		@apply md:text-[32px];
+		@apply md:font-bold;
+		@apply md:leading-[140%];
+		@apply md:tracking-normal;
+	}
+	h4 {
+		/* mobile */
+		@apply text-[14px];
+		@apply font-bold;
+		@apply leading-[140%];
+		@apply tracking-wider;
+		/* website */
+		@apply md:text-[26px];
+		@apply md:font-bold;
+		@apply md:leading-[140%];
+		@apply md:tracking-normal;
+	}
+	h5 {
+		@apply md:text-[20px];
+		@apply md:font-bold;
+		@apply md:leading-[140%];
+		@apply md:tracking-normal;
+	}
+	h6 {
+		@apply 2xl:text-[18px];
+		@apply 2xl:font-bold;
+		@apply 2xl:leading-[140%];
+		@apply 2xl:tracking-normal;
+	}
+}
