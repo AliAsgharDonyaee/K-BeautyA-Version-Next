@@ -1,15 +1,30 @@
-import { getLocation } from "@/utils/functions";
 import { MagnifyingGlassIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Logo from "public/images/logo/beautya_logo.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Spiral as Hamburger } from "hamburger-react";
 import PhoneNavigation from "./PhoneNavigation";
 import Link from "next/link";
 import Navigation from "./Navigation";
+import axios from "axios";
 
 const Header = () => {
 	const [menu, setMenu] = useState(false);
+	const [data, setData] = useState({
+		cou: "",
+		lan: "",
+	});
+	useEffect(() => {
+		axios
+			.get("https://api.ipregistry.co/?key=z7uzqkwb7p5jjf69")
+			.then((res) => {
+				setData({ cou: res.data.location.country.code, lan: res.data.location.language.code.toUpperCase() });
+				return data;
+			})
+			.catch((err) => {
+				console.log(err.message);
+			});
+	}, [data]);
 	return (
 		<header className='border-b-2 bg-gradient-to-r from-white lg:from-primary-50 via-primary-50 lg:via-white to-white lg:to-white w-full h-11x 2xl:h-16x '>
 			<nav className='container px-3 xl:p-0 py-1 mx-auto w-full h-full grid grid-cols-8 md:grid-cols-12 grid-rows-1 fbc'>
@@ -48,8 +63,8 @@ const Header = () => {
 					<MapPinIcon className='Icon-Size' />
 					<div className='fcc'>
 						<p>
-							{getLocation().cou}
-							<sub className=' text-grays-600'>({getLocation().lan})</sub>
+							{data.cou}
+							<sub className=' text-grays-600'>({data.lan})</sub>
 						</p>
 					</div>
 				</div>

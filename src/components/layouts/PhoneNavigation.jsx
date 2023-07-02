@@ -9,28 +9,28 @@ const PhoneNavLinks = () => {
 				<MenuItem component={<Link href='/' />}>Women Make UP</MenuItem>
 				<SubMenu label='Women Skincare'>
 					<SubMenu label='By Category'>
-						{ByCategoryNavLinks.map(({ title, link }) => (
-							<MenuItem key={link} href={link}>
+						{ByCategoryNavLinks.map(({ title, link },index) => (
+							<MenuItem key={index} href={link}>
 								+ {title}
 							</MenuItem>
 						))}
 					</SubMenu>
 					<SubMenu label='By Skin Condition'>
-						{BySkinConditionNavLinks.map(({ title, link }) => (
-							<MenuItem key={link} href={link}>
+						{BySkinConditionNavLinks.map(({ title, link },index) => (
+							<MenuItem key={index} href={link}>
 								+ {title}
 							</MenuItem>
 						))}
 					</SubMenu>
 					<SubMenu label='Collection'>
-						{Collection.map(({ title, link }) => (
-							<MenuItem key={link} href={link}>
+						{Collection.map(({ title, link },index) => (
+							<MenuItem key={index} href={link}>
 								+ {title}
 							</MenuItem>
 						))}
 					</SubMenu>
-					{WomenSkincareLinks.map(({ title, link }) => (
-						<MenuItem key={link} href={link}>
+					{WomenSkincareLinks.map(({ title, link },index) => (
+						<MenuItem key={index} href={link}>
 							+ {title}
 						</MenuItem>
 					))}

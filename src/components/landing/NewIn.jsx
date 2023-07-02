@@ -80,8 +80,8 @@ const NewIn = () => {
 							</div>
 						</Link>
 					</SwiperSlide>
-					{item.map(({ des, image, price, title }) => (
-						<SwiperSlide key={title} className={style.swiperSildeNewInP}>
+					{item.map(({ des, image, price, title },index) => (
+						<SwiperSlide key={index} className={style.swiperSildeNewInP}>
 							<Link
 								href='/'
 								className='fcc border-2 md border-grays-400 w-full h-[92%] text-start grid grid-rows-5 grid-cols-1 bg-white'

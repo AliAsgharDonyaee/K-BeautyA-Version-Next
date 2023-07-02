@@ -29,8 +29,8 @@ const Navigation = () => {
 					<PeerNavigation />
 				</div>
 			)}
-			{MainNavLinks.map(({ title, link }) => (
-				<li key={link} className='mx-2 2xl:mx-4'>
+			{MainNavLinks.map(({ title, link },index) => (
+				<li key={index} className='mx-2 2xl:mx-4'>
 					<Link
 						href={link}
 						className={`hover:text-primary-600 my-4 ${

@@ -53,8 +53,8 @@ const ProductsCarosel = () => {
 				autoplay
 				className='mySwiper h-full w-auto'
 			>
-				{item.map(({ des, image, price, title }) => (
-					<SwiperSlide key={title} className={style.swiperSilde}>
+				{item.map(({ des, image, price, title },index) => (
+					<SwiperSlide key={index} className={style.swiperSilde}>
 						<Link
 							href='/'
 							className='fcc border-2 md border-grays-400 w-full h-[90%] text-start grid grid-rows-5 grid-cols-1'

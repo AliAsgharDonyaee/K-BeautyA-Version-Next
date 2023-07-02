@@ -85,8 +85,8 @@ const Footer = () => {
 					</div>
 					<div className='w-full h-1/2 col-span-1 row-span-1 fsc md:fec'>
 						<ul className='flex'>
-							{item.map(({ link, Icon }) => (
-								<Link href={link}>
+							{item.map(({ link, Icon },index) => (
+								<Link key={index} href={link}>
 									<Icon className='mr-4 text-primary-200 w-10 lg:w-8 h-10 lg:h-8' />
 								</Link>
 							))}
