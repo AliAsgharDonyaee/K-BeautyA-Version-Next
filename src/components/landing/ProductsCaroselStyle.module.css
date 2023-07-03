@@ -9,7 +9,12 @@
 }
 @media screen and (min-width: 1280px) {
 	.swiperSilde {
-		width: 385px;
+		width: 285px;
+	}
+}
+@media screen and (min-width: 1536px) {
+	.swiperSilde {
+		width: 335px;
 	}
 }
 @media screen and (min-width: 768px) {
@@ -30,5 +35,15 @@
 @media screen and (min-width: 1280px) {
 	.swiperSildeNewInP {
 		width: 375px;
+	}
+}
+@media screen and (min-width: 768px) {
+	.swiperSildeNewInPB {
+		width: 50%;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.swiperSildeNewInPB {
+		width: 33%;
 	}
 }

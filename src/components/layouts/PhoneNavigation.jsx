@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { WomenSkincareLinks, ByCategoryNavLinks, BySkinConditionNavLinks, Collection } from "data/navLinks";
+import { WomenSkincareLinks, ByCategoryNavLinks, BySkinConditionNavLinks, Collection } from "data/datas";
 import { Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 
 const PhoneNavLinks = () => {
@@ -9,27 +9,27 @@ const PhoneNavLinks = () => {
 				<MenuItem component={<Link href='/' />}>Women Make UP</MenuItem>
 				<SubMenu label='Women Skincare'>
 					<SubMenu label='By Category'>
-						{ByCategoryNavLinks.map(({ title, link },index) => (
+						{ByCategoryNavLinks.map(({ title, link }, index) => (
 							<MenuItem key={index} href={link}>
 								+ {title}
 							</MenuItem>
 						))}
 					</SubMenu>
 					<SubMenu label='By Skin Condition'>
-						{BySkinConditionNavLinks.map(({ title, link },index) => (
+						{BySkinConditionNavLinks.map(({ title, link }, index) => (
 							<MenuItem key={index} href={link}>
 								+ {title}
 							</MenuItem>
 						))}
 					</SubMenu>
 					<SubMenu label='Collection'>
-						{Collection.map(({ title, link },index) => (
+						{Collection.map(({ title, link }, index) => (
 							<MenuItem key={index} href={link}>
 								+ {title}
 							</MenuItem>
 						))}
 					</SubMenu>
-					{WomenSkincareLinks.map(({ title, link },index) => (
+					{WomenSkincareLinks.map(({ title, link }, index) => (
 						<MenuItem key={index} href={link}>
 							+ {title}
 						</MenuItem>

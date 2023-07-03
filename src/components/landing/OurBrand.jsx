@@ -3,9 +3,9 @@ import Image1 from "public/images/brand/Frame 26085715.jpg";
 
 const OurBrand = () => {
 	return (
-		<div className='py-4 lg:p-0 my-8 w-full h-20x lg:h-18x 2xl:h-20x bg-inherit text-white lg:fbc lg:flex-row-reverse'>
-			<h1 className='my-4 lg:hidden text-center'>our brand</h1>
-			<div className='mx-auto w-18x md:w-19x lg:w-1/2 xl:w-1/2 2xl:w-2/3 h-[200px] md:h-[240px] lg:h-full fcc object-cover'>
+		<div className='py-4 lg:p-0 my-8 w-full h-20x lg:h-[285px] xl:h-18x 2xl:h-19x bg-inherit text-white lg:fbc lg:flex-row-reverse'>
+			<h1 className='my-4 lg:hidden text-center text-white'>our brand</h1>
+			<div className='mx-auto w-18x md:w-19x lg:w-1/2 xl:w-1/2 2xl:w-1/2 h-[200px] md:h-[240px] lg:h-full fcc object-cover'>
 				<Image
 					src={Image1}
 					alt='our brand img'
@@ -14,7 +14,7 @@ const OurBrand = () => {
 					className='w-full h-full object-cover'
 				/>
 			</div>
-			<div className='lg:py-4 fss flex-col lg:w-1/2 xl:w-1/2 2xl:w-1/3 lg:pl-4 xl:px-14'>
+			<div className='lg:py-4 fss flex-col lg:w-1/2 xl:w-1/2 2xl:w-1/2 lg:pl-4 xl:px-14'>
 				<h1 className='mb-4 hidden lg:block'>our brand</h1>
 				<p className='mt-4 lg:mt-0 lg:mb-2 px-5 lg:p-0 lg:pr-8 mx-auto md:w-3/4 lg:w-full Body-MD text-center lg:text-start'>
 					We believe that beauty thrives in diversity and discovery. Our purpose is to expand the way the

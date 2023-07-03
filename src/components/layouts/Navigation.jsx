@@ -1,9 +1,9 @@
-import { MainNavLinks } from "data/navLinks";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import PeerNavigation from "./PeerNavigation";
 import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { MainNavLinks } from "data/datas";
 
 const Navigation = () => {
 	const router = useRouter();
@@ -14,10 +14,10 @@ const Navigation = () => {
 				onClick={() => setItem(!item)}
 				href='/'
 				className={`hover:text-primary-600 ${
-					router.asPath === "/women-skincare" ? "text-primary-600" : "text-grays-900"
+					router.asPath === "/women-skincare" ? "text-primary-600" : "text-grays-700"
 				}`}
 			>
-				<h6 className='fbc 2xl:text-xl'>
+				<h6 className='fbc 2xl:text-base'>
 					Women Skincare
 					<ChevronDownIcon
 						className={`ml-1 w-4 h-4 transition transform duration-300 ${item && "rotate-180"}`}
@@ -29,15 +29,15 @@ const Navigation = () => {
 					<PeerNavigation />
 				</div>
 			)}
-			{MainNavLinks.map(({ title, link },index) => (
+			{MainNavLinks.map(({ title, link }, index) => (
 				<li key={index} className='mx-2 2xl:mx-4'>
 					<Link
 						href={link}
 						className={`hover:text-primary-600 my-4 ${
-							router.asPath === link ? "text-primary-600" : "text-grays-900"
+							router.asPath === link ? "text-primary-600" : "text-grays-700"
 						}`}
 					>
-						<h6 className='2xl:text-xl'>{title}</h6>
+						<h6 className='2xl:text-base'>{title}</h6>
 					</Link>
 				</li>
 			))}

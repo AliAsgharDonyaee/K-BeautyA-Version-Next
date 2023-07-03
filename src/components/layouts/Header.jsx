@@ -26,7 +26,7 @@ const Header = () => {
 			});
 	}, [data]);
 	return (
-		<header className='border-b-2 bg-gradient-to-r from-white lg:from-primary-50 via-primary-50 lg:via-white to-white lg:to-white w-full h-11x 2xl:h-16x '>
+		<header className='border-b-2 bg-gradient-to-r from-white lg:from-primary-50 via-primary-50 lg:via-white to-white lg:to-white w-screen h-11x 2xl:h-16x fixed top-0 left-0 z-20'>
 			<nav className='container px-3 xl:p-0 py-1 mx-auto w-full h-full grid grid-cols-8 md:grid-cols-12 grid-rows-1 fbc'>
 				<div className='lg:hidden col-span-1 row-span-1 fsc'>
 					<Hamburger

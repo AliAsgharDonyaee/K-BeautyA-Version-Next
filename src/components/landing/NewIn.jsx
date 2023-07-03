@@ -72,7 +72,7 @@ const NewIn = () => {
 							</div>
 							<div className='p-2 px-3 w-full h-full col-span-1 row-span-2 xl:row-span-1 fas flex-col'>
 								<h2 className='text-primary-100 md:hidden'>Beautya La Mousse Off/On Foaming Cleaner</h2>
-								<h5 className='text-primary-100 md:block'>Beautya La Mousse Off/On Foaming Cleaner</h5>
+								<h5 className='text-primary-100 hidden md:block'>Beautya La Mousse Off/On Foaming Cleaner</h5>
 								<p className='text-white Body-MD'>
 									Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
 									officia consequat duis en im velit mollit.

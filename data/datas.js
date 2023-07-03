@@ -2,22 +2,18 @@ export const MainNavLinks = [
 	{
 		title: "Women Make UP",
 		link: "/women-make-up",
-		icon: true,
 	},
 	{
 		title: "Gifs & Sets",
 		link: "/gifs-and-sets",
-		icon: true,
 	},
 	{
 		title: "Branches",
 		link: "/branches",
-		icon: false,
 	},
 	{
 		title: "Our Brand",
 		link: "/our-brand",
-		icon: false,
 	},
 ];
 

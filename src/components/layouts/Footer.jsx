@@ -67,7 +67,7 @@ const Footer = () => {
 								I agree to Beautya’s Terms and Conditions and Privacy and Policy.
 							</label>
 						</div>
-						<button className='mt-8 mx-auto w-1/2 h-10x bg-inherit border-2 border-white transition hover:ring-2 ring-white ring-offset-1'>
+						<button className='mt-4 mx-auto w-1/2 h-10x bg-inherit border-2 border-white transition hover:ring-2 ring-white ring-offset-1'>
 							subscribe
 						</button>
 					</div>

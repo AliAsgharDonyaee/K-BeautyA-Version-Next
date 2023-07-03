@@ -9,6 +9,21 @@ body {
 	font-family: "Poppins", sans-serif;
 }
 
+::-webkit-scrollbar {
+	width: 0.7rem;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+	width: 0.7rem;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #a10550;
+	border-radius: 50px;
+}
+
 @layer components {
 	/* flexing */
 	.fcc {
@@ -36,7 +51,7 @@ body {
 		@apply justify-start;
 		@apply items-center;
 	}
-	.fss{
+	.fss {
 		@apply flex;
 		@apply justify-start;
 		@apply items-start;

@@ -44,7 +44,7 @@ const item = [
 
 const ProductsCarosel = () => {
 	return (
-		<div className='px-3 py-3 w-auto h-19x md:h-20x xl:h-22x'>
+		<div className='px-3 py-3 w-auto h-19x md:h-20x xl:h-21x 2xl:h-22x'>
 			<Swiper
 				modules={[Pagination, Autoplay]}
 				slidesPerView={"auto"}
@@ -53,13 +53,13 @@ const ProductsCarosel = () => {
 				autoplay
 				className='mySwiper h-full w-auto'
 			>
-				{item.map(({ des, image, price, title },index) => (
+				{item.map(({ des, image, price, title }, index) => (
 					<SwiperSlide key={index} className={style.swiperSilde}>
 						<Link
 							href='/'
-							className='fcc border-2 md border-grays-400 w-full h-[90%] text-start grid grid-rows-5 grid-cols-1'
+							className='fcc border-2 md border-grays-400 w-full h-[90%] text-start grid grid-rows-3 grid-cols-1'
 						>
-							<div className='w-full h-full col-span-1 row-span-3 xl:row-span-4'>
+							<div className='w-full h-full col-span-1 row-span-3'>
 								<Image
 									src={image}
 									alt='banner img'
@@ -68,7 +68,7 @@ const ProductsCarosel = () => {
 									className='w-full h-full object-cover'
 								/>
 							</div>
-							<div className='p-2 px-3 w-full h-full col-span-1 row-span-2 xl:row-span-1 fas flex-col'>
+							<div className='p-2 px-3 w-full h-full col-span-1 row-span-2 fas flex-col'>
 								<h4 className='text-primary md:hidden'>{title}</h4>
 								<h6 className='text-primary hidden md:block xl:text-xl'>{title}</h6>
 								<p className='Body-SM'>{des}</p>

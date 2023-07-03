@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 
 import Image from "next/image";
 import Banner from "public/images/baners/1.png";
+import { ArrowDownIcon } from "@heroicons/react/24/outline";
 
 const Carosel = () => {
 	return (
@@ -32,6 +33,9 @@ const Carosel = () => {
 							<button className='mt-8 mx-auto w-1/2 md:w-1/3 lg:w-1/5 xl:w-[15%] 2xl:w-[10%] h-10x text-white border-2 2xl:border-4 border-white transition hover:ring-2 ring-white ring-offset-1'>
 								Know More
 							</button>
+							<div className='mt-4 pt-2 w-8 xl:w-10 h-14 xl:h-16 bg-black bg-opacity-50 fcc rounded-sm'>
+								<ArrowDownIcon className='Icon-Size animate-bounce text-white' />
+							</div>
 						</div>
 					</div>
 				</div>
