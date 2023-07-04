@@ -22,7 +22,7 @@ const Header = () => {
 				return data;
 			})
 			.catch((err) => {
-				console.log(err.message);
+				console.log("error ipregistry =>",err.message);
 			});
 	}, [data]);
 	return (

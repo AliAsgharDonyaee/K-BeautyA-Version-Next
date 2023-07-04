@@ -49,7 +49,6 @@ const ProductsCarosel = () => {
 				modules={[Pagination, Autoplay]}
 				slidesPerView={"auto"}
 				spaceBetween={30}
-				// pagination={{ clickable: true, dynamicBullets: true }}
 				autoplay
 				className='mySwiper h-full w-auto'
 			>
@@ -82,4 +81,5 @@ const ProductsCarosel = () => {
 		</div>
 	);
 };
+
 export default ProductsCarosel;

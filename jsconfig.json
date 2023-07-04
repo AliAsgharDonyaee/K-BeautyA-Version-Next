@@ -5,8 +5,9 @@
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
       "@/pages/*": ["./src/pages/*"],
-      "@/utils/*": ["./src/utils/*"],
       "@/api/*": ["./src/api/*"],
+      "@/server/*": ["./server/*"],
+      "@/data/*": ["./data/*"],
     }
   }
 }
