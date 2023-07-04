@@ -6,43 +6,22 @@ import "swiper/css/pagination";
 
 import Link from "next/link";
 import Image from "next/image";
-import Images from "public/images/products/product-image-1.jpg";
 import style from "./ProductsCaroselStyle.module.css";
+import { getData } from "@/pages/api/v1/best_seller_products/list";
+import { useState } from "react";
 
-const item = [
-	{
-		image: Images,
-		title: "Beautya Prestige la Mousse Micellaire",
-		des: "Anti-Aging Face Serum, with Purifying French Water Lily",
-		price: 76,
-	},
-	{
-		image: Images,
-		title: "Beautya Prestige la Mousse Micellaire",
-		des: "Anti-Aging Face Serum, with Purifying French Water Lily",
-		price: 76,
-	},
-	{
-		image: Images,
-		title: "Beautya Prestige la Mousse Micellaire",
-		des: "Anti-Aging Face Serum, with Purifying French Water Lily",
-		price: 76,
-	},
-	{
-		image: Images,
-		title: "Beautya Prestige la Mousse Micellaire",
-		des: "Anti-Aging Face Serum, with Purifying French Water Lily",
-		price: 76,
-	},
-	{
-		image: Images,
-		title: "Beautya Prestige la Mousse Micellaire",
-		des: "Anti-Aging Face Serum, with Purifying French Water Lily",
-		price: 76,
-	},
-];
+export async function getStaticProps() {
+	const data = await getData();
+	return {
+		props: {
+			data,
+		},
+		revalidate: 1,
+	};
+}
 
-const ProductsCarosel = () => {
+const ProductsCarosel = ({ data }) => {
+	const [item, setItem] = useState(data);
 	return (
 		<div className='px-3 py-3 w-auto h-19x md:h-20x xl:h-21x 2xl:h-22x'>
 			<Swiper
@@ -52,7 +31,7 @@ const ProductsCarosel = () => {
 				autoplay
 				className='mySwiper h-full w-auto'
 			>
-				{item.map(({ des, image, price, title }, index) => (
+				{item?.map(({ des, image, price, title }, index) => (
 					<SwiperSlide key={index} className={style.swiperSilde}>
 						<Link
 							href='/'

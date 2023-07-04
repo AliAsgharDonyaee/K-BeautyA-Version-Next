@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import PeerNavigation from "./PeerNavigation";
 import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import { MainNavLinks } from "data/datas";
+import { MainNavLinks } from "@/data/datas";
 
 const Navigation = () => {
 	const router = useRouter();

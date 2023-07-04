@@ -157,7 +157,7 @@ export const Collection = [
 	},
 ];
 
-export const categoryLandingDatas = [
+export const CategoryLandingDatas = [
 	{
 		title: "Women Make Up",
 		link: "/women-make-up",

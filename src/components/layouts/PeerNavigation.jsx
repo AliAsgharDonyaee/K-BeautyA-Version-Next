@@ -2,7 +2,12 @@ import Link from "next/link";
 // import { ByCategoryNavLinks, BySkinConditionNavLinks, Collection, WomenSkincareLinks } from "data/navLinks";
 import Image from "next/image";
 import PeerImage from "public/images/peer-navigation/Rectangle 12344.png";
-import { ByCategoryNavLinks, BySkinConditionNavLinks, WomenSkincareLinks,Collection } from "data/datas";
+import {
+	ByCategoryNavLinks,
+	BySkinConditionNavLinks,
+	WomenSkincareLinks,
+	Collection,
+} from "@/data/datas";
 
 const PeerNavigation = () => {
 	return (
