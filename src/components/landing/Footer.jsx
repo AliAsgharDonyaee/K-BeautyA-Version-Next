@@ -13,8 +13,8 @@ const item = [
 const Footer = () => {
 	return (
 		<div className='w-full h-full grid grid-cols-2 lg:grid-cols-4 grid-rows-2 lg:grid-rows-1 gap-y-5 lg:gap-0'>
-			{item.map(({ Icon, title }) => (
-				<div className=' fevc md:fcc'>
+			{item.map(({ Icon, title },index) => (
+				<div key={index} className=' fevc md:fcc'>
 					<Icon className='text-3xl xl:text-4xl 2xl:text-5xl' />
 					<p className='Body-SM md:ml-3'>{title}</p>
 				</div>
