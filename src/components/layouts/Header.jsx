@@ -7,9 +7,11 @@ import PhoneNavigation from "./PhoneNavigation";
 import Link from "next/link";
 import Navigation from "./Navigation";
 import axios from "axios";
+import SearchPeer from "./SearchPeer";
 
 const Header = () => {
 	const [menu, setMenu] = useState(false);
+	const [item, setItem] = useState(false);
 	const [data, setData] = useState({
 		cou: "",
 		lan: "",
@@ -22,7 +24,7 @@ const Header = () => {
 				return data;
 			})
 			.catch((err) => {
-				console.log("error ipregistry =>",err.message);
+				console.log("error ipregistry =>", err.message);
 			});
 	}, [data]);
 	return (
@@ -37,13 +39,20 @@ const Header = () => {
 						size={20}
 						label='Show menu'
 						rounded
+						color='#A10550'
 					/>
 				</div>
 				<div className='lg:hidden col-span-1 row-span-1 fsc'>
 					<button>
-						<MagnifyingGlassIcon className='Icon-Size text-primary-500' />
+						<MagnifyingGlassIcon className='Icon-Size text-primary-500' onClick={() => setItem(!item)} />
 					</button>
 				</div>
+				{/* mobile */}
+				{item && (
+					<div className='bg-white px-3 xl:p-0 transition transform fixed top-16 2xl:top-[104px] left-0 w-full h-screen lg:h-19x z-20'>
+						<SearchPeer />
+					</div>
+				)}
 				<div className='col-span-4 md:col-span-8 lg:col-span-2 row-span-1 fcc lg:fsc'>
 					<Link href='/'>
 						<Image src={Logo} alt='logo img' quality={100} placeholder='blur' className='w-14x 2xl:w-17x' />
@@ -56,9 +65,15 @@ const Header = () => {
 				{/* navigation */}
 				<div className='hidden lg:fec col-span-1 row-span-1 fcc'>
 					<button>
-						<MagnifyingGlassIcon className='Icon-Size text-primary-500' />
+						<MagnifyingGlassIcon className='Icon-Size text-primary-500' onClick={() => setItem(!item)} />
 					</button>
 				</div>
+				{/* web */}
+				{item && (
+					<div className='bg-white px-3 xl:p-0 transition transform fixed top-16 2xl:top-[104px] left-0 w-full h-screen lg:h-19x z-20'>
+						<SearchPeer />
+					</div>
+				)}
 				<div className='col-span-2 md:col-span-2 lg:col-span-1 row-span-1 fec text-primary-500'>
 					<MapPinIcon className='Icon-Size' />
 					<div className='fcc'>
