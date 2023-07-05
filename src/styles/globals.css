@@ -56,6 +56,11 @@ body {
 		@apply justify-start;
 		@apply items-start;
 	}
+	.fes {
+		@apply flex;
+		@apply justify-end;
+		@apply items-start;
+	}
 	.fec {
 		@apply flex;
 		@apply justify-end;

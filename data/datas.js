@@ -156,21 +156,3 @@ export const Collection = [
 		link: "/beautya-hydra-life",
 	},
 ];
-
-export const CategoryLandingDatas = [
-	{
-		title: "Women Make Up",
-		link: "/women-make-up",
-		image: "make-up-image.jpg",
-	},
-	{
-		title: "Women Skincare",
-		link: "/women-skincare",
-		image: "skincare-image.jpg",
-	},
-	{
-		title: "Gifts & sets",
-		link: "/gifts-and-sets",
-		image: "gifts-image.jpg",
-	},
-];

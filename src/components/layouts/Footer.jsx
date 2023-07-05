@@ -13,7 +13,7 @@ const Footer = () => {
 	return (
 		<footer className='w-full h-screen md:h-auto bg-gradient-to-r from-primary-700 via-primary-800 to-primary-700'>
 			<div className='mx-auto container w-full h-full'>
-				<div className='px-3 py-9 lg:py-16 xl:py-20 w-full h-[70%] bg-primary-700 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-rows-4 md:grid-rows-2 lg:grid-rows-1 gap-y-4 text-white'>
+				<div className='px-3 py-3 lg:py-16 xl:py-20 w-full h-[70%] bg-primary-700 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-rows-4 md:grid-rows-2 lg:grid-rows-1 gap-y-4 text-white'>
 					<div className='col-span-1 row-span-1'>
 						<h3 className='mb-4'>How can we Help?</h3>
 						<Link href='/'>
@@ -32,7 +32,7 @@ const Footer = () => {
 							<p className='mb-2 Body-MD'>Blog</p>
 						</Link>
 					</div>
-					<div className='col-span-1 row-span-1 fcs md:fss flex-col'>
+					<div className='col-span-1 row-span-1 fes md:fss flex-col'>
 						<h3 className='mb-4'>Products</h3>
 						<Link href='/'>
 							<p className=' mb-2 Body-MD'>Women Make up</p>
