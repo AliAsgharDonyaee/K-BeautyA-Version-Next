@@ -77,5 +77,6 @@ export async function getStaticProps() {
 			bestProducts: JSON.parse(JSON.stringify(bestProducts)),
 			blog: JSON.parse(JSON.stringify(blog)),
 		},
+		revalidate: 1,
 	};
 }
