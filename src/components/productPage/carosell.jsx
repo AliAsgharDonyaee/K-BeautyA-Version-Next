@@ -33,12 +33,12 @@ const Carosell = () => {
 			{item.map((i,index) => (
 				<SwiperSlide key={index} className={style.swiperSildeNewPN}>
 					<Image
-						src={`/../public/images/products/${i.link}`}
+						src={`/../public/images/products/f/${i.link}`}
 						alt='product banner img'
 						quality={100}
 						width={100}
 						height={100}
-						className='w-full h-full bg-red-500'
+						className='w-full h-full'
 					/>
 				</SwiperSlide>
 			))}

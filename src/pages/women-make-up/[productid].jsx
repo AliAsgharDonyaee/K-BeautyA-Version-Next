@@ -4,8 +4,9 @@ import Carosell from "@/components/productPage/carosell";
 import ProductDetails from "@/components/productPage/productDetails";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { getOneData } from "../api/v1/products/lists";
 
-const ProductId = () => {
+const ProductId = ({ data }) => {
 	const router = useRouter();
 	return (
 		<>
@@ -18,9 +19,9 @@ const ProductId = () => {
 					<div className='my-8 lg:my-4'>
 						<p className='text-grays-600 text-sm'>Home &gt; women-make-up &gt; {router.query.productid}</p>
 					</div>
-					<ProductDetails />
+					<ProductDetails data={data[0]} />
 					<div className='w-full h-auto bg-white'>
-						<ProductAbout />
+						<ProductAbout data={data[0]} />
 					</div>
 					<div className='my-4 w-full h-auto p-3 bg-gradient-to-r from-primary-700 via-primary-800 to-primary-700'>
 						<WideCenter>
@@ -34,7 +35,7 @@ const ProductId = () => {
 								</p>
 								<p>
 									<strong>After 1 month :</strong> The skin looks firmer+60% | The skin looks denser
-									+56%{" "}
+									+56%
 								</p>
 							</div>
 						</WideCenter>
@@ -45,12 +46,14 @@ const ProductId = () => {
 	);
 };
 
-// export async function getServerSideProps(ctx){
-// 	return {
-// 		propd: {
-// 			data
-// 		}
-// 	}
-// }
+export async function getServerSideProps(ctx) {
+	const { query } = ctx;
+	const data = await getOneData(query.productid);
+	return {
+		props: {
+			data: JSON.parse(JSON.stringify(data)),
+		},
+	};
+}
 
 export default ProductId;

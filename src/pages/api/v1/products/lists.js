@@ -12,8 +12,7 @@ export default async function handler(req, res) {
 	// 	d.data = data;
 	// 	return res.status(201).json({ data });
 	// } else
-		if (method === "GET")
-		{
+	if (method === "GET") {
 		const datas = await getDatasProduct();
 		return res.status(200).json({ datas });
 	}
@@ -27,5 +26,10 @@ export async function getDatasProduct() {
 export async function getDatasFromSearch(body) {
 	const getBody = body?.data;
 	const data = await products.find({ title: { $in: `${getBody}` } });
+	return data;
+}
+
+export async function getOneData(id) {
+	const data = await products.find({ _id: { $in: id } });
 	return data;
 }
