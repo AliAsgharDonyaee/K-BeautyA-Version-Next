@@ -30,8 +30,8 @@ const Carosell = () => {
 			autoplay
 			className='mySwiper h-full w-auto'
 		>
-			{item.map((i) => (
-				<SwiperSlide className={style.swiperSildeNewPN}>
+			{item.map((i,index) => (
+				<SwiperSlide key={index} className={style.swiperSildeNewPN}>
 					<Image
 						src={`/../public/images/products/${i.link}`}
 						alt='product banner img'
