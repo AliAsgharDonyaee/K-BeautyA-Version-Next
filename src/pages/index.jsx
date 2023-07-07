@@ -15,7 +15,7 @@ import WideCenter from "@/components/landing/WideCenter";
 import Footer from "@/components/landing/Footer";
 
 export default function Home({ category, bestProducts, blog }) {
-	if (!category) return Notiflix.Notify.failure("There is no data to get");
+	if (!category) return Notiflix.Notify.failure("There is no data to get in landing page");
 	return (
 		<>
 			<Head>
@@ -32,9 +32,6 @@ export default function Home({ category, bestProducts, blog }) {
 					<Category category={category} />
 				</WideCenter>
 				<div className='bg-gradient-to-r from-primary-700 via-primary-800 to-primary-700'>
-					{/* <div className='mx-auto container'>
-						<OurBrand />
-					</div> */}
 					<WideCenter>
 						<OurBrand />
 					</WideCenter>

@@ -8,8 +8,10 @@ import Link from "next/link";
 import Image from "next/image";
 import style from "./ProductsCaroselStyle.module.css";
 import { offPriceFunc } from "@/server/utils/functions";
+import { useRouter } from "next/router";
 
 const ProductsCarosel = ({ bestProducts }) => {
+	const router = useRouter();
 	return (
 		<div className='px-3 py-3 w-auto h-19x md:h-20x xl:h-21x 2xl:h-22x'>
 			<Swiper
@@ -22,7 +24,7 @@ const ProductsCarosel = ({ bestProducts }) => {
 				{bestProducts?.map(({ description, imageLink, price, title, _id, offPrice }) => (
 					<SwiperSlide key={_id} className={`${style.swiperSilde} ${!bestProducts && "animate-pulse"}`}>
 						<Link
-							href='/'
+							href={`/women-make-up/${router.pathname}`}
 							className='fcc border-2 md border-grays-400 w-full h-[90%] text-start grid grid-rows-3 grid-cols-1'
 						>
 							<div className='w-full h-full col-span-1 row-span-3'>
@@ -31,7 +33,7 @@ const ProductsCarosel = ({ bestProducts }) => {
 									alt={title}
 									quality={100}
 									width={100}
-									height={100}
+									height={100}	
 									className='w-full h-full'
 								/>
 							</div>

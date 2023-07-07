@@ -1,10 +1,5 @@
 import Link from "next/link";
-import {
-	WomenSkincareLinks,
-	ByCategoryNavLinks,
-	BySkinConditionNavLinks,
-	Collection,
-} from "@/data/datas";
+import { WomenSkincareLinks, ByCategoryNavLinks, BySkinConditionNavLinks, Collection } from "@/data/datas";
 import { Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 
 const PhoneNavLinks = () => {

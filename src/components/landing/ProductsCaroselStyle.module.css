@@ -47,3 +47,18 @@
 		width: 33%;
 	}
 }
+@media screen and (min-width: 768px) {
+	.swiperSildeNewPN {
+		width: 340px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.swiperSildeNewPN {
+		width: 310px;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.swiperSildeNewPN {
+		width: 285px;
+	}
+}

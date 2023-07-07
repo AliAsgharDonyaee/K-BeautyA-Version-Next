@@ -61,7 +61,7 @@ const Footer = () => {
 								type='checkbox'
 								name='checkbox'
 								id='checkbox-email'
-								className='bg-primary-700 border-gray-500 accent-primary-400 mr-2 w-10 md:w-6 h-10 md:w-6'
+								className='bg-primary-700 border-gray-500 accent-primary-400 mr-2 w-10 md:w-6 h-10'
 							/>
 							<label htmlFor='checkbox'>
 								I agree to Beautya’s Terms and Conditions and Privacy and Policy.

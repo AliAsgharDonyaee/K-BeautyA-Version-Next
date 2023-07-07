@@ -6,12 +6,12 @@ import "swiper/css/pagination";
 
 import Link from "next/link";
 import Image from "next/image";
-import Images from "public/images/products/product-image-1.jpg";
 import Brand from "public/images/brand/Rectangle 12336.jpg";
 import style from "./ProductsCaroselStyle.module.css";
-import { offPriceFunc } from "@/server/utils/functions";
+import { useRouter } from "next/router";
 
 const NewIn = ({ bestProducts }) => {
+	const router = useRouter();
 	return (
 		<>
 			<header className='text-white h-16 fcc'>
@@ -23,12 +23,14 @@ const NewIn = ({ bestProducts }) => {
 					modules={[Pagination, Autoplay]}
 					slidesPerView={"auto"}
 					spaceBetween={30}
-					// pagination={{ clickable: true, dynamicBullets: true }}
 					autoplay
 					className='mySwiper h-full w-auto'
 				>
 					<SwiperSlide className={style.swiperSildeNewIn}>
-						<Link href='/' className='fcc w-full h-[90%] text-start grid grid-rows-5 grid-cols-1'>
+						<Link
+							href="/"
+							className='fcc w-full h-[90%] text-start grid grid-rows-5 grid-cols-1'
+						>
 							<div className='w-full h-full col-span-1 row-span-3 xl:row-span-4'>
 								<Image
 									src={Brand}
@@ -53,7 +55,7 @@ const NewIn = ({ bestProducts }) => {
 					{bestProducts.map(({ description, imageLink, price, title, _id, offPrice }) => (
 						<SwiperSlide key={_id} className={`${style.swiperSilde} ${!bestProducts && "animate-pulse"}`}>
 							<Link
-								href='/'
+								href={`/women-make-up/${router.pathname}`}
 								className='fcc border-2 md border-grays-400 bg-white w-full h-[90%] text-start grid grid-rows-3 grid-cols-1'
 							>
 								<div className='w-full h-full col-span-1 row-span-3'>
